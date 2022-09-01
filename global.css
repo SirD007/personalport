@@ -10,8 +10,7 @@
 
 section{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 body{
@@ -200,7 +199,6 @@ nav a button svg {
 
     .greetings{
         display: flex;
-        flex-wrap: wrap;
         margin-top: 7rem;
         height: 650px;
         justify-content: space-between;
@@ -212,7 +210,7 @@ nav a button svg {
     .greetings_left_container p{
         color: white;
         font-size: 3.5rem;
-        line-height: 4.5rem;
+        line-height: 4rem;
     }
 
     .greetings_left_container p:nth-child(1),
@@ -221,6 +219,13 @@ nav a button svg {
     {
         color: var(--title-color);
         font-weight: bold;
+    }
+
+    .greetings_left_container p:nth-child(4)
+    {
+        color: gray;
+        font-size: 1.8rem;
+        line-height: 4rem;
     }
 
     .greetings_buttons{
@@ -275,16 +280,94 @@ nav a button svg {
             align-items: center;
             width: 85%;
             flex-direction: column;
+            justify-content: center;
     }
 
     .about_me span{
         font-size: 1.6rem;
         color: gray;
+        text-align: center;
+        padding-inline: 150px;
     }
 
     .about_me span:nth-child(1){
-        font-size: 2rem;
+        font-size: 2.4rem;
         color: lightgray;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    /* TECHS SECTION */
+
+    .techs {
+        display: flex;
+        height: 400px;
+        align-items: center;
+        width: 85%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .techs_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .techs .techs_text{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-right: 50px;
+    }
+
+    .techs .techs_text span{
+        font-size: 1.6rem;
+        color: gray;
+        text-align: center;
+        text-align: left;
+    }
+
+    .techs .techs_text span:nth-child(1){
+        font-size: 2.4rem;
+        color: lightgray;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .techs_cards{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        cursor: pointer;
+    }
+
+    .tech_card{
+        background-color: var(--button-secondary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border-bottom: 4px var(--button-main-color) solid;
+        border-radius: 5px;
+        margin: 10px;
+        height: 150px;
+        width: 150px;
+        transition: transform ease-in-out 0.3s;
+    }
+
+    .tech_card:hover{
+        transform: scale(1.1);
+    }
+
+    .tech_card .card_title{
+        color: var(--button-main-color);
+        font-size: 1.6rem;
+    }
+
+    .techs .tech_card img{
+        width: 70px;
     }
 
   /* MEDIA QUERIES */

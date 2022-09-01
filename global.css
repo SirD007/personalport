@@ -1,0 +1,303 @@
+/* CONFIG */
+
+:root {
+    --bg-main-color:#0f172a;
+    --button-main-color:#7dd3fc;
+    --button-secondary-color:#1e293b;
+    --title-color:#44bff8;
+    font-size: 10px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    background-color: var(--bg-main-color);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f11e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--title-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--button-main-color);
+}
+
+
+/* NAV BAR */
+
+.nav_items {
+    display: flex;
+    padding-inline: 50px;
+    justify-content: space-between;
+    height: 7rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(15, 23, 42, 0.3);
+}
+
+
+.nav_logo {
+    font-size:1.8rem;
+    color: white;
+    transition: 0.5s;
+}
+
+
+nav ul li a {
+    color: lightgray;
+    font-size: 1.6rem;
+    margin-inline: 20px;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--button-main-color);
+}
+
+nav ul li a:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+    background: linear-gradient(270deg, var(--button-main-color) 0%, #17161d00 100%);
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transform-origin: bottom right;
+}
+
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}   
+
+nav ul {
+    display: flex;
+    margin-right: 10vw;
+}
+
+nav a button {
+    background-color: var(--button-secondary-color);
+    border: none;
+    padding: 10px;
+    position: relative;
+    cursor:pointer;
+}
+
+nav a button svg {
+    fill :white;
+}
+
+.github_button {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.github_btn_tooltip {
+    position: absolute;
+    top: 45px;
+    background-color: var(--button-secondary-color);
+    opacity: 0.8;
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10%;
+    opacity: 0;
+    transition:all 0.2s;
+    left: -10px;
+}
+
+.github_button:hover .github_btn_tooltip{
+    opacity: 1;
+}
+
+  /* MOBILE MENU */
+  
+    .mobile_menu{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        background-color: var(--bg-main-color);
+        width: 110vw;
+        height: 110vh;
+        left:-1;
+        top:-10;
+        overflow: hidden;
+    }
+
+    #mobile_links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #mobile_links a{
+        color: var(--title-color);
+        font-size: 2rem;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile_nav{
+        z-index: 5;
+        display: none;
+    }
+
+    .mobile_nav a{
+        color: white;
+    }
+
+    #mobile_links a:first-child{
+        color: white;
+        margin-bottom: 50px;
+    }
+
+
+    /* GREETINGS SECTION */
+
+    .greetings{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 7rem;
+        height: 650px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+        width: 85%;
+    }
+
+    .greetings_left_container p{
+        color: white;
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+
+    .greetings_left_container p:nth-child(1),
+    .greetings_left_container p:nth-child(5),
+    .greetings_left_container p:nth-child(3)
+    {
+        color: var(--title-color);
+        font-weight: bold;
+    }
+
+    .greetings_buttons{
+        margin-top: 30px;
+    }
+
+    .greetings_left_container button{
+        padding: 10px 20px;
+        background-color: var(--title-color);
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: ease-in-out 0.3s;
+    }
+
+    .greetings_left_container a:nth-child(2) button{
+        padding: 10px 20px;
+        background-color: var(--button-secondary-color);
+        border-radius: 20px;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+        border: var(--title-color) 1px solid;
+        color: var(--title-color);
+    }
+
+    .greetings_left_container a:nth-child(2) button:hover{
+        padding: 10px 20px;
+        background-color: var(--title-color);
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+        border: var(--title-color) 1px solid;
+        color: var(--bg-main-color);
+    }
+
+    .greetings_left_container button:hover{
+        background-color: var(--button-main-color);
+    }
+
+    .greetings_right_container img{
+        width: 450px;
+    }
+
+
+    /* ABOUT ME SECTION */
+
+    .about_me {
+            display: flex;
+            height: 400px;
+            align-items: center;
+            width: 85%;
+            flex-direction: column;
+    }
+
+    .about_me span{
+        font-size: 1.6rem;
+        color: gray;
+    }
+
+    .about_me span:nth-child(1){
+        font-size: 2rem;
+        color: lightgray;
+    }
+
+  /* MEDIA QUERIES */
+
+  @media (max-width: 768px) {
+
+    nav a button, nav ul, .github_btn_tooltip{
+        display: none;
+    }
+
+    .mobile_nav{
+        display: flex;
+    }
+
+
+  }

@@ -58,6 +58,7 @@ ul {
 /* NAV BAR */
 
 .nav_items {
+    z-index: 1200;
     display: flex;
     padding-inline: 50px;
     justify-content: space-between;
@@ -357,6 +358,7 @@ nav a button svg {
 
     .tech_card{
         background-color: var(--button-secondary-color);
+        border-radius: 8px 8px 0 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -426,6 +428,7 @@ nav a button svg {
     }
 
     .portfolio_section{
+        padding: 100px 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -455,15 +458,19 @@ nav a button svg {
         margin-top: 50px;
         display: flex;
         gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .job_card{
+        margin-bottom: 60px;
         width: 370px;
         height: 230px;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s;
     }
 
     .job_card::after{
@@ -471,22 +478,90 @@ nav a button svg {
         content: '';
         width: 370px;
         height: 230px;
-        background-color: rgba(0, 0, 0, 0.377);
+        background-color: rgba(0, 0, 0, 0.555);
     }
 
     .job_card .card_cover img{
-        max-width: 370px;
-        max-height: 230px;
-        width: auto;
-        height: auto;
+        width: 370px;
+        height: 230px;
     }
 
     .card_description {
+        gap: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         margin: auto;
         color: white;
         font-size: 1.8rem;
-        z-index: 2;
+        z-index: 2; 
+        transition: all 0.3s;
+    }
+
+    #view_more_btn{
+        display: none;
+        transition: all 0.3s;
+        padding: 10px;
+        background-color: transparent;
+        border: 1px solid var(--title-color);
+        color: var(--title-color);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #view_more_btn:hover{
+        background-color: var(--title-color);
+        color: var(--button-secondary-color)
+    }
+
+    .job_techs{
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.7s;
+    }
+
+    .job_techs img{
+        width: auto;
+        height: auto;
+        max-width: 20px;
+        max-height: 20px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .job_card:hover{
+        transform: scale(1.1);
+    }
+
+    .job_card:hover:after{
+        background-color: transparent;
+    }
+
+    .job_card:hover .card_description{
+        transform: translateY(150px);
+    }
+
+    .job_card:hover #view_more_btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .job_card:hover::after{
+        position: absolute;
+        content: "";
+        background-color: var(--button-secondary-color);
+        height: 70px;
+        top: 230px;
+        width: 370px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .job_card:hover .job_techs{
+        opacity: 1;
     }
 
   /* MEDIA QUERIES */

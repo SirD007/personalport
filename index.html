@@ -23,8 +23,8 @@
             <a class="nav_logo" href="#"><strong>DAVID</strong> MORAIS</a>
 
         <ul>
-            <li><a class="nav_link" href="#">About me</a></li>
-            <li><a class="nav_link" href="#">Tech</a></li>
+            <li><a class="nav_link" href="#about_me">About me</a></li>
+            <li><a class="nav_link" href="#techs">Tech</a></li>
             <li><a class="nav_link" href="#">Portfolio</a></li>
             <li><a class="nav_link" href="#">Contact</a></li>
         </ul>
@@ -42,8 +42,8 @@
           <div class="mobile_menu">
             <div id="mobile_links">
                     <a class="nav_logo" href="#"><strong>DAVID</strong> MORAIS</a>
-                    <a href="#">About Me</a>
-                    <a href="#">Techs</a>
+                    <a href="#about_,e">About Me</a>
+                    <a href="#techs">Techs</a>
                     <a href="#">Portfolio</a>
                     <a href="#">Contact</a>
               </div>
@@ -75,14 +75,16 @@
     </section>
 
     <section>
-        <div class="about_me">
-            <span>About me</span>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla assumenda itaque rerum aliquam dolorum iusto eos, quo saepe dolor aperiam fugit ipsam! Architecto asperiores quod neque, explicabo similique fuga porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos veniam illo quos aspernatur, itaque iusto maiores error, totam molestiae dolor aliquid magni. Consequatur tempora quisquam aperiam nostrum quae deleniti quam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat tempore consectetur, repudiandae nesciunt aspernatur ipsam, minima, neque molestiae aliquid quisquam similique quis veritatis quia sint. Laudantium provident error tempora esse.</span>
+        <div class="about_me" id="about_me">
+            <div class="about_me_section">
+                <span>About me</span>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla assumenda itaque rerum aliquam dolorum iusto eos, quo saepe dolor aperiam fugit ipsam! Architecto asperiores quod neque, explicabo similique fuga porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos veniam illo quos aspernatur, itaque iusto maiores error, totam molestiae dolor aliquid magni. Consequatur tempora quisquam aperiam nostrum quae deleniti quam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat tempore consectetur, repudiandae nesciunt aspernatur ipsam, minima, neque molestiae aliquid quisquam similique quis veritatis quia sint. Laudantium provident error tempora esse.</span>
+            </div>
         </div>
     </section>
 
     <section>
-        <div class="techs">
+        <div class="techs" id="techs">
             <div class="techs_section">
                 <div class="techs_text">
                     <span class="section_title">Techs</span>
@@ -91,39 +93,71 @@
                 <div class="techs_cards">
     
                     <div class="tech_card">
-                        <span class="card_title">HTML</span>
-                        <img src="assets/images/react_icon.png" alt="react_icon">
+                        <span class="card_title_up">HTML</span>
+                        <img src="assets/images/html_icon.png" alt="react_icon">
                     </div>
                     
                     <div class="tech_card">
-                        <span class="card_title">CSS</span>
+                        <span class="card_title_up">CSS</span>
+                        <img src="assets/images/css_icon.png" alt="react_icon">
+                    </div>
+    
+                    <div class="tech_card">
+                        <span class="card_title_up">Javascript</span>
+                        <img src="assets/images/js_icon.png" alt="react_icon">
+                    </div>
+    
+                    <div class="tech_card">
+                        <span class="card_title_down">Tailwind CSS</span>
+                        <img src="assets/images/tailwind_icon.png" alt="react_icon">
+                    </div>
+    
+                    <div class="tech_card">
+                        <span class="card_title_down">React</span>
                         <img src="assets/images/react_icon.png" alt="react_icon">
                     </div>
     
                     <div class="tech_card">
-                        <span class="card_title">Javascript</span>
-                        <img src="assets/images/react_icon.png" alt="react_icon">
-                    </div>
-    
-                    <div class="tech_card">
-                        <span class="card_title">Tailwind CSS</span>
-                        <img src="assets/images/react_icon.png" alt="react_icon">
-                    </div>
-    
-                    <div class="tech_card">
-                        <span class="card_title">React</span>
-                        <img src="assets/images/react_icon.png" alt="react_icon">
-                    </div>
-    
-                    <div class="tech_card">
-                        <span class="card_title">Figma</span>
-                        <img src="assets/images/react_icon.png" alt="react_icon">
+                        <span class="card_title_down">Figma</span>
+                        <img src="assets/images/figma_icon.png" alt="react_icon">
                     </div>
     
                 </div>
             </div>
             </div>
             
+    </section>
+
+    <section>
+        <div class="portfolio" id="portfolio">
+            <div class="portfolio_section">
+                <div class="section_text">
+                    <span class="section_title">Projetos</span>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores totam provident optio, accusamus facere!</span>
+                </div>
+                <div class="cards_container">
+
+                    <div class="job_card">
+                        <div class="card_cover">
+                            <img src="assets/images/swot.png" alt="">
+                        </div>
+                        <div class="card_description">
+                            <p>SWOT Analysis</p>
+                        </div>
+                    </div>
+
+                    <div class="job_card">
+                        <div class="card_cover">
+                            <img src="assets/images/label_generator.png" alt="">
+                        </div>
+                        <div class="card_description">
+                            <p>Shipping Label Generator</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="script.js"></script>

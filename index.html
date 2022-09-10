@@ -216,21 +216,23 @@
                     <span class="section_title">Get in Touch</span>
                     <span>Do you want to hire me? Send me a message with your project's details. I will return as soon as possible!</span>
                 </div>
-                <form method="post" action="">
+                <form onsubmit="sendEmail(); reset(); return false">
                     <div class="inputbox">
-                        <input type="text" required>
+                        <input type="text" id="form_name" required>
                         <span>Name</span>
                     </div>
-                <form method="post" action="">
                     <div class="inputbox">
-                        <input type="email" required>
+                        <input type="email" id="form_mail" required>
                         <span>Email</span>
                     </div>
                     <div class="inputbox">
                         <textarea required name="tell_more" id="tell_more" cols="30" rows="10"></textarea>
                         <span>Subject</span>
                     </div>
-                    <button type="submit">Send</button>
+                    <div class="form_footer">
+                        <p class="form_msg"></p>
+                        <button type="submit">Send</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -242,6 +244,8 @@
         </span>
     </footer>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>

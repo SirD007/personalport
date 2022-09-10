@@ -15,32 +15,28 @@ function mobileMenu() {
 
   }
 
-      function handleSelectChange(event) {
-      var selectElement = event.target;
-      var value = selectElement.value;
-
-      return value
-  }
-
-  function sendEmail(e){
-    e.preventDefault();
-   const formMsg = document.querySelector('.form_msg')
-   const formName = document.querySelector('#form_name')
-   const formEmail = document.querySelector('#form_mail')
-   const formSubject = document.querySelector('#tell_more')
+  function sendEmail(){
+  //  const formMsg = document.querySelector('.form_msg').value
+   const formName = document.querySelector('#form_name').value
+   const formEmail = document.querySelector('#form_mail').value
+   const formSubject = document.querySelector('#tell_more').value
 
     Email.send({
-      SecureToken : "f11b51bf-7ff6-49a3-9942-970c7337ea2e",
+      SecureToken: "8ebdf653-8eaa-4d60-b7a7-e13fdbbdb324",
+      // Host : "smtp.elasticemail.com",
+      // Username : "thedavid2009@gmail.com",
+      // Password : "EF81124380727A601C322B82356CADE25257",
       To : 'thedavid2009@gmail.com',
-      From : formEmail.value,
+      From : formEmail,
       Subject : "Um novo contato em seu site [David Morais]",
-      Body : "Name: " + formName.value
-      + "<br> Email: " + formEmail.value
-      + "<br> Message: " + formSubject.value
+      Body : "Name: " + formName
+      + "<br> Email: " + formEmail
+      + "<br> Message: " + formSubject
   }).then(
-    formMsg.innerHTML = "Message Sent Successfully"
-  ).catch(
-    formMsg.style.color="red",
-    formMsg.innerHTML = "Something gone wrong"
+    message => alert(message)
+  //   formMsg.innerHTML = "Message Sent Successfully"
+  // ).catch(
+  //   formMsg.style.color="red",
+  //   formMsg.innerHTML = "Something gone wrong"
   );
   }

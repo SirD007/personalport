@@ -216,7 +216,7 @@
                     <span class="section_title">Get in Touch</span>
                     <span>Do you want to hire me? Send me a message with your project's details. I will return as soon as possible!</span>
                 </div>
-                <form onsubmit="sendEmail()">
+                <form onsubmit="sendEmail(); reset(); return false">
                     <div class="inputbox">
                         <input type="text" id="form_name" required>
                         <span>Name</span>

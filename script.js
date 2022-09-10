@@ -22,20 +22,17 @@ function mobileMenu() {
       return value
   }
 
-  function sendEmail(){
-
-  //  const formMsg = document.querySelector('.form_msg')
-  //  const formName = document.querySelector('#form_name')
-  //  const formEmail = document.querySelector('#form_mail')
-  //  const formSubject = document.querySelector('#tell_more')
+  function sendEmail(e){
+    e.preventDefault();
+   const formMsg = document.querySelector('.form_msg')
+   const formName = document.querySelector('#form_name')
+   const formEmail = document.querySelector('#form_mail')
+   const formSubject = document.querySelector('#tell_more')
 
     Email.send({
-      // Host : "smtp.elasticemail.com",
-      // Username : "thedavid2009@gmail.com",
-      // Password : "686EDAF7941563E2572D3DF70DBECA379641",
-      SecureToken : "e19d50bb-c732-4474-9c76-fd89f786cb38",
+      SecureToken : " f11b51bf-7ff6-49a3-9942-970c7337ea2e",
       To : 'thedavid2009@gmail.com',
-      From : document.querySelector('#form_mail').value,
+      From : formEmail.value,
       Subject : "Um novo contato em seu site [David Morais]",
       Body : "Name: " + formName.value
       + "<br> Email: " + formEmail.value

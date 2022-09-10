@@ -30,7 +30,7 @@ function mobileMenu() {
    const formSubject = document.querySelector('#tell_more')
 
     Email.send({
-      SecureToken : " f11b51bf-7ff6-49a3-9942-970c7337ea2e",
+      SecureToken : "f11b51bf-7ff6-49a3-9942-970c7337ea2e",
       To : 'thedavid2009@gmail.com',
       From : formEmail.value,
       Subject : "Um novo contato em seu site [David Morais]",
